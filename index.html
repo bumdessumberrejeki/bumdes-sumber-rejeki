@@ -2306,6 +2306,18 @@
             }
         });
     </script>
+<script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var navCollapse = document.querySelector(".navbar-collapse");
+        var bsCollapse = new bootstrap.Collapse(navCollapse, { toggle: false });
 
+        window.addEventListener("scroll", function () {
+          if (navCollapse.classList.contains("show")) {
+            bsCollapse.hide();
+          }
+        });
+      });
+    </script>
 
 </body></html>
+
