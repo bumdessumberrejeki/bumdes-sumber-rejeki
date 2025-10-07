@@ -1,0 +1,2310 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUMDes Sumber Rejeki - Desa Durenombo</title>
+    <meta name="description" content="BUMDes Sumber Rejeki Desa Durenombo - Membangun Desa, Mensejahterakan Warga melalui unit usaha ternak domba berkualitas">
+    <meta name="keywords" content="BUMDes, ternak domba, Desa Durenombo, Sumber Rejeki, pemberdayaan desa">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-green: #2E7D32;
+            --secondary-green: #4CAF50;
+            --light-green: #C8E6C9;
+            --primary-brown: #5D4037;
+            --secondary-brown: #8D6E63;
+            --light-brown: #D7CCC8;
+            --gold: #FFC107;
+            --light-gold: #FFECB3;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            overflow-x: hidden;
+        }
+        
+        /* Header Styles */
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary-green) !important;
+            display: flex;
+            align-items: center;
+        }
+        
+        .navbar-brand img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        .nav-link {
+            color: var(--primary-brown) !important;
+            font-weight: 500;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-green) !important;
+            transform: translateY(-2px);
+        }
+        
+        .navbar-toggler {
+            border: none;
+        }
+        
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(rgba(46, 125, 50, 0.7), rgba(46, 125, 50, 0.7)), url('https://cdn.pixabay.com/photo/2021/07/05/11/22/sheeps-6388894_1280.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease 0.2s;
+            animation-fill-mode: both;
+        }
+        
+        .hero-buttons {
+            animation: fadeInUp 1s ease 0.4s;
+            animation-fill-mode: both;
+        }
+        
+        .btn-hero {
+            padding: 12px 30px;
+            font-weight: 600;
+            border-radius: 50px;
+            margin-right: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary-custom {
+            background-color: var(--gold);
+            color: var(--primary-brown);
+            border: none;
+        }
+        
+        .btn-primary-custom:hover {
+            background-color: #FFB300;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .btn-outline-custom {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-outline-custom:hover {
+            background-color: white;
+            color: var(--primary-green);
+            transform: translateY(-3px);
+        }
+        
+        /* Sheep Animation */
+        .sheep-container {
+            position: absolute;
+            bottom: 50px;
+            width: 100%;
+            height: 100px;
+            z-index: 1;
+        }
+        
+        .sheep {
+            position: absolute;
+            bottom: 0;
+            width: 80px;
+            height: 60px;
+            animation: walk 20s linear infinite;
+        }
+        
+        .sheep:nth-child(2) {
+            animation-delay: 5s;
+            left: -100px;
+        }
+        
+        .sheep:nth-child(3) {
+            animation-delay: 10s;
+            left: -200px;
+        }
+        
+        @keyframes walk {
+            0% {
+                left: -100px;
+            }
+            100% {
+                left: calc(100% + 100px);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Section Styles */
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background-color: var(--gold);
+        }
+        
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--secondary-brown);
+            margin-bottom: 50px;
+        }
+        
+        /* Business Unit Card */
+        .business-card {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 30px;
+            height: 100%;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .business-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .business-card-icon {
+            font-size: 3rem;
+            color: var(--primary-green);
+            margin-bottom: 20px;
+        }
+        
+        .business-card-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-brown);
+            margin-bottom: 15px;
+        }
+        
+        .business-card-text {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .business-card-btn {
+            color: var(--primary-green);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        
+        .business-card-btn:hover {
+            color: var(--secondary-green);
+            transform: translateX(5px);
+        }
+        
+        /* Product Card */
+        .product-card {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .product-img-container {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .product-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.5s ease;
+        }
+        
+        .product-card:hover .product-img {
+            transform: scale(1.1);
+        }
+        
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: var(--gold);
+            color: var(--primary-brown);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
+        
+        .product-body {
+            padding: 20px;
+        }
+        
+        .product-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary-brown);
+            margin-bottom: 10px;
+        }
+        
+        .product-details {
+            margin-bottom: 15px;
+        }
+        
+        .product-detail-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+        
+        .product-detail-label {
+            color: #666;
+        }
+        
+        .product-detail-value {
+            font-weight: 600;
+            color: var(--primary-green);
+        }
+        
+        .product-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 15px;
+        }
+        
+        .product-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: var(--primary-green);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .product-btn:hover {
+            background-color: var(--secondary-green);
+            transform: translateY(-3px);
+        }
+        
+        /* Testimonial Card */
+        .testimonial-card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            height: 100%;
+            position: relative;
+        }
+        
+        .testimonial-icon {
+            font-size: 3rem;
+            color: var(--light-green);
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .testimonial-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            object-fit: cover;
+        }
+        
+        .testimonial-name {
+            font-weight: 600;
+            color: var(--primary-brown);
+        }
+        
+        .testimonial-role {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        /* Gallery Section */
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            cursor: pointer;
+        }
+        
+        .gallery-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: all 0.5s ease;
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.7));
+            display: flex;
+            align-items: flex-end;
+            padding: 20px;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        
+        .gallery-item:hover .gallery-img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-title {
+            color: white;
+            font-weight: 600;
+        }
+        
+        /* Financial Report */
+        .report-card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .report-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-brown);
+            margin-bottom: 20px;
+        }
+        
+        .report-stats {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .report-chart {
+            height: 300px;
+            margin-bottom: 30px;
+        }
+        
+        .report-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--primary-green);
+            color: white;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .report-btn:hover {
+            background-color: var(--secondary-green);
+            transform: translateY(-3px);
+        }
+        
+        /* Contact Section */
+        .contact-info {
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            height: 100%;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--light-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            color: var(--primary-green);
+            font-size: 1.2rem;
+        }
+        
+        .contact-text {
+            flex: 1;
+        }
+        
+        .contact-label {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 5px;
+        }
+        
+        .contact-value {
+            font-weight: 600;
+            color: var(--primary-brown);
+        }
+        
+        .contact-form {
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-control {
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            padding: 12px 15px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary-green);
+            box-shadow: 0 0 0 0.2rem rgba(46, 125, 50, 0.25);
+        }
+        
+        .form-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: var(--primary-green);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .form-btn:hover {
+            background-color: var(--secondary-green);
+            transform: translateY(-3px);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary-brown);
+            color: white;
+            padding: 50px 0 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .footer-sheep {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 80px;
+        }
+        
+        .footer-sheep-item {
+            position: absolute;
+            bottom: 0;
+            width: 60px;
+            height: 40px;
+            animation: walk 15s linear infinite;
+        }
+        
+        .footer-sheep-item:nth-child(2) {
+            animation-delay: 5s;
+            left: -100px;
+        }
+        
+        .footer-sheep-item:nth-child(3) {
+            animation-delay: 10s;
+            left: -200px;
+        }
+        
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--gold);
+        }
+        
+        .footer-text {
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            opacity: 1;
+            transform: translateX(5px);
+        }
+        
+        .social-links {
+            display: flex;
+            margin-top: 20px;
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background-color: var(--gold);
+            color: var(--primary-brown);
+            transform: translateY(-5px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            margin-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            opacity: 0.8;
+        }
+        
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+        
+        /* Timeline Animation */
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background-color: var(--light-green);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 50px;
+        }
+        
+        .timeline-content {
+            background-color: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            width: 45%;
+            position: relative;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: auto;
+        }
+        
+        .timeline-icon {
+            position: absolute;
+            top: 20px;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            z-index: 1;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-icon {
+            left: -20px;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-icon {
+            right: -20px;
+        }
+        
+        .timeline-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-brown);
+            margin-bottom: 10px;
+        }
+        
+        .timeline-text {
+            color: #666;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .timeline::before {
+                left: 30px;
+            }
+            
+            .timeline-content {
+                width: calc(100% - 60px);
+                margin-left: 60px !important;
+            }
+            
+            .timeline-icon {
+                left: 10px !important;
+            }
+            
+            .report-stats {
+                flex-direction: column;
+            }
+            
+            .stat-item {
+                margin-bottom: 20px;
+            }
+        }
+        
+        /* Loading Animation */
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: all 0.5s ease;
+        }
+        
+        .loader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        .loader-sheep {
+            width: 100px;
+            height: 100px;
+            position: relative;
+        }
+        
+        .loader-sheep-body {
+            width: 80px;
+            height: 60px;
+            background-color: var(--light-brown);
+            border-radius: 50%;
+            position: absolute;
+            top: 20px;
+            left: 10px;
+            animation: bounce 1s infinite;
+        }
+        
+        .loader-sheep-head {
+            width: 40px;
+            height: 40px;
+            background-color: var(--secondary-brown);
+            border-radius: 50%;
+            position: absolute;
+            top: 10px;
+            left: 60px;
+            animation: bounce 1s infinite 0.2s;
+        }
+        
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+        
+        /* Sheep Leg Walking Animation */
+        .sheep-leg-front-left {
+            animation: legWalkFrontLeft 0.5s ease-in-out infinite;
+            transform-origin: top center;
+        }
+        
+        .sheep-leg-front-right {
+            animation: legWalkFrontRight 0.5s ease-in-out infinite;
+            transform-origin: top center;
+        }
+        
+        .sheep-leg-back-left {
+            animation: legWalkBackLeft 0.5s ease-in-out infinite;
+            transform-origin: top center;
+        }
+        
+        .sheep-leg-back-right {
+            animation: legWalkBackRight 0.5s ease-in-out infinite;
+            transform-origin: top center;
+        }
+        
+        @keyframes legWalkFrontLeft {
+            0%, 100% {
+                transform: rotate(-15deg);
+            }
+            50% {
+                transform: rotate(15deg);
+            }
+        }
+        
+        @keyframes legWalkFrontRight {
+            0%, 100% {
+                transform: rotate(15deg);
+            }
+            50% {
+                transform: rotate(-15deg);
+            }
+        }
+        
+        @keyframes legWalkBackLeft {
+            0%, 100% {
+                transform: rotate(15deg);
+            }
+            50% {
+                transform: rotate(-15deg);
+            }
+        }
+        
+        @keyframes legWalkBackRight {
+            0%, 100% {
+                transform: rotate(-15deg);
+            }
+            50% {
+                transform: rotate(15deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-sheep">
+            <div class="loader-sheep-body"></div>
+            <div class="loader-sheep-head"></div>
+        </div>
+    </div>
+    
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#home">
+                    <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Background circle -->
+                        <circle cx="50" cy="50" r="45" fill="#2E7D32"></circle>
+                        
+                        <!-- Simple circles like loading animation -->
+                        <circle cx="35" cy="50" r="20" fill="#D7CCC8"></circle>
+                        <circle cx="65" cy="50" r="12" fill="#8D6E63"></circle>
+                    </svg>
+                    BUMDes Sumber Rejeki
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home">Beranda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">Tentang Kami</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#business">Unit Usaha</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#products">Produk</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#news">Berita</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#gallery">Galeri</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#transparency">Transparansi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#testimonials">Testimoni</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Kontak</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Membangun Desa, Mensejahterakan Warga</h1>
+                        <p class="hero-subtitle">BUMDes Sumber Rejeki Desa Durenombo - Mengembangkan potensi desa melalui unit usaha ternak domba berkualitas</p>
+                        <div class="hero-buttons">
+                            <a href="#products" class="btn btn-hero btn-primary-custom">Pesan Domba</a>
+                            <a href="#contact" class="btn btn-hero btn-outline-custom">Hubungi Kami</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Animated Sheep -->
+        <div class="sheep-container">
+            <svg class="sheep" viewBox="0 0 100 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Body -->
+                <ellipse cx="50" cy="35" rx="25" ry="18" fill="#F5F5F5"></ellipse>
+                <ellipse cx="50" cy="35" rx="22" ry="15" fill="#FFFFFF"></ellipse>
+                
+                <!-- Wool texture -->
+                <circle cx="45" cy="30" r="3" fill="#F5F5F5" opacity="0.7"></circle>
+                <circle cx="55" cy="32" r="2.5" fill="#F5F5F5" opacity="0.7"></circle>
+                <circle cx="48" cy="38" r="3" fill="#F5F5F5" opacity="0.7"></circle>
+                <circle cx="52" cy="36" r="2" fill="#F5F5F5" opacity="0.7"></circle>
+                
+                <!-- Head -->
+                <ellipse cx="70" cy="30" rx="12" ry="10" fill="#8D6E63"></ellipse>
+                <ellipse cx="72" cy="28" rx="10" ry="8" fill="#A1887F"></ellipse>
+                
+                <!-- Eyes -->
+                <circle cx="75" cy="28" r="2" fill="#212121"></circle>
+                <circle cx="75.5" cy="27.5" r="0.5" fill="white"></circle>
+                
+                <!-- Ears -->
+                <ellipse cx="68" cy="22" rx="3" ry="5" fill="#6D4C41" transform="rotate(-20 68 22)"></ellipse>
+                <ellipse cx="76" cy="22" rx="3" ry="5" fill="#6D4C41" transform="rotate(20 76 22)"></ellipse>
+                
+                <!-- Legs with walking animation -->
+                <g class="sheep-leg-front-left">
+                    <rect x="35" y="45" width="4" height="12" rx="2" fill="#5D4037"></rect>
+                    <ellipse cx="37" cy="57" rx="3" ry="2" fill="#3E2723"></ellipse>
+                </g>
+                <g class="sheep-leg-front-right">
+                    <rect x="42" y="45" width="4" height="12" rx="2" fill="#5D4037"></rect>
+                    <ellipse cx="44" cy="57" rx="3" ry="2" fill="#3E2723"></ellipse>
+                </g>
+                <g class="sheep-leg-back-left">
+                    <rect x="54" y="45" width="4" height="12" rx="2" fill="#5D4037"></rect>
+                    <ellipse cx="56" cy="57" rx="3" ry="2" fill="#3E2723"></ellipse>
+                </g>
+                <g class="sheep-leg-back-right">
+                    <rect x="61" y="45" width="4" height="12" rx="2" fill="#5D4037"></rect>
+                    <ellipse cx="63" cy="57" rx="3" ry="2" fill="#3E2723"></ellipse>
+                </g>
+                
+                <!-- Tail -->
+                <ellipse cx="25" cy="35" rx="8" ry="4" fill="#F5F5F5" transform="rotate(-30 25 35)"></ellipse>
+                <circle cx="23" cy="33" r="2" fill="#212121"></circle>
+            </svg>
+            <svg class="sheep" viewBox="0 0 100 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Body -->
+                <ellipse cx="50" cy="35" rx="25" ry="18" fill="#F5F5F5"></ellipse>
+                <ellipse cx="50" cy="35" rx="22" ry="15" fill="#FFFFFF"></ellipse>
+                
+                <!-- Wool texture -->
+                <circle cx="45" cy="30" r="3" fill="#F5F5F5" opacity="0.7"></circle>
+                <circle cx="55" cy="32" r="2.5" fill="#F5F5F5" opacity="0.7"></circle>
+                <circle cx="48" cy="38" r="3" fill="#F5F5F5" opacity="0.7"></circle>
+                <circle cx="52" cy="36" r="2" fill="#F5F5F5" opacity="0.7"></circle>
+                
+                <!-- Head -->
+                <ellipse cx="70" cy="30" rx="12" ry="10" fill="#8D6E63"></ellipse>
+                <ellipse cx="72" cy="28" rx="10" ry="8" fill="#A1887F"></ellipse>
+                
+                <!-- Eyes -->
+                <circle cx="75" cy="28" r="2" fill="#212121"></circle>
+                <circle cx="75.5" cy="27.5" r="0.5" fill="white"></circle>
+                
+                <!-- Ears -->
+                <ellipse cx="68" cy="22" rx="3" ry="5" fill="#6D4C41" transform="rotate(-20 68 22)"></ellipse>
+                <ellipse cx="76" cy="22" rx="3" ry="5" fill="#6D4C41" transform="rotate(20 76 22)"></ellipse>
+                
+                <!-- Legs with walking animation -->
+                <g class="sheep-leg-front-left">
+                    <rect x="35" y="45" width="4" height="12" rx="2" fill="#5D4037"></rect>
+                    <ellipse cx="37" cy="57" rx="3" ry="2" fill="#3E2723"></ellipse>
+                </g>
+                <g class="sheep-leg-front-right">
+                    <rect x="42" y="45" width="4" height="12" rx="2" fill="#5D4037"></rect>
+                    <ellipse cx="44" cy="57" rx="3" ry="2" fill="#3E2723"></ellipse>
+                </g>
+                <g class="sheep-leg-back-left">
+                    <rect x="54" y="45" width="4" height="12" rx="2" fill="#5D4037"></rect>
+                    <ellipse cx="56" cy="57" rx="3" ry="2" fill="#3E2723"></ellipse>
+                </g>
+                <g class="sheep-leg-back-right">
+                    <rect x="61" y="45" width="4" height="12" rx="2" fill="#5D4037"></rect>
+                    <ellipse cx="63" cy="57" rx="3" ry="2" fill="#3E2723"></ellipse>
+                </g>
+                
+                <!-- Tail -->
+                <ellipse cx="25" cy="35" rx="8" ry="4" fill="#F5F5F5" transform="rotate(-30 25 35)"></ellipse>
+                <circle cx="23" cy="33" r="2" fill="#212121"></circle>
+            </svg>
+            <svg class="sheep" viewBox="0 0 100 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Body -->
+                <ellipse cx="50" cy="35" rx="25" ry="18" fill="#F5F5F5"></ellipse>
+                <ellipse cx="50" cy="35" rx="22" ry="15" fill="#FFFFFF"></ellipse>
+                
+                <!-- Wool texture -->
+                <circle cx="45" cy="30" r="3" fill="#F5F5F5" opacity="0.7"></circle>
+                <circle cx="55" cy="32" r="2.5" fill="#F5F5F5" opacity="0.7"></circle>
+                <circle cx="48" cy="38" r="3" fill="#F5F5F5" opacity="0.7"></circle>
+                <circle cx="52" cy="36" r="2" fill="#F5F5F5" opacity="0.7"></circle>
+                
+                <!-- Head -->
+                <ellipse cx="70" cy="30" rx="12" ry="10" fill="#8D6E63"></ellipse>
+                <ellipse cx="72" cy="28" rx="10" ry="8" fill="#A1887F"></ellipse>
+                
+                <!-- Eyes -->
+                <circle cx="75" cy="28" r="2" fill="#212121"></circle>
+                <circle cx="75.5" cy="27.5" r="0.5" fill="white"></circle>
+                
+                <!-- Ears -->
+                <ellipse cx="68" cy="22" rx="3" ry="5" fill="#6D4C41" transform="rotate(-20 68 22)"></ellipse>
+                <ellipse cx="76" cy="22" rx="3" ry="5" fill="#6D4C41" transform="rotate(20 76 22)"></ellipse>
+                
+                <!-- Legs with walking animation -->
+                <g class="sheep-leg-front-left">
+                    <rect x="35" y="45" width="4" height="12" rx="2" fill="#5D4037"></rect>
+                    <ellipse cx="37" cy="57" rx="3" ry="2" fill="#3E2723"></ellipse>
+                </g>
+                <g class="sheep-leg-front-right">
+                    <rect x="42" y="45" width="4" height="12" rx="2" fill="#5D4037"></rect>
+                    <ellipse cx="44" cy="57" rx="3" ry="2" fill="#3E2723"></ellipse>
+                </g>
+                <g class="sheep-leg-back-left">
+                    <rect x="54" y="45" width="4" height="12" rx="2" fill="#5D4037"></rect>
+                    <ellipse cx="56" cy="57" rx="3" ry="2" fill="#3E2723"></ellipse>
+                </g>
+                <g class="sheep-leg-back-right">
+                    <rect x="61" y="45" width="4" height="12" rx="2" fill="#5D4037"></rect>
+                    <ellipse cx="63" cy="57" rx="3" ry="2" fill="#3E2723"></ellipse>
+                </g>
+                
+                <!-- Tail -->
+                <ellipse cx="25" cy="35" rx="8" ry="4" fill="#F5F5F5" transform="rotate(-30 25 35)"></ellipse>
+                <circle cx="23" cy="33" r="2" fill="#212121"></circle>
+            </svg>
+        </div>
+    </section>
+    
+    <!-- Business Units Section -->
+    <section id="business" class="section bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Unit Usaha Unggulan</h2>
+                <p class="section-subtitle">Kami mengembangkan berbagai unit usaha untuk meningkatkan kesejahteraan warga desa</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="business-card">
+                        <div class="business-card-icon">
+                            <i class="fas fa-horse"></i>
+                        </div>
+                        <h3 class="business-card-title">Ternak Domba</h3>
+                        <p class="business-card-text">Unit usaha ternak domba dengan kualitas terbaik, dipelihara dengan pakan alami dan lingkungan yang sehat.</p>
+                        <a href="#products" class="business-card-btn">Lihat Produk <i class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="business-card">
+                        <div class="business-card-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h3 class="business-card-title">Pakan Ternak</h3>
+                        <p class="business-card-text">Produksi pakan ternak berkualitas dari bahan alami untuk mendukung kesehatan dan pertumbuhan domba.</p>
+                        <a href="#" class="business-card-btn">Pelajari Lebih Lanjut <i class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="business-card">
+                        <div class="business-card-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="business-card-title">Pemberdayaan Warga</h3>
+                        <p class="business-card-text">Program pelatihan dan pemberdayaan masyarakat desa dalam bidang peternakan dan kewirausahaan.</p>
+                        <a href="#" class="business-card-btn">Bergabung Bersama Kami <i class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4" data-aos="fade-right">
+                    <img src="https://s3.ap-southeast-1.amazonaws.com/goopo.id/contents/feeds/4p2gl8ItXGj1yRVN0QyKB4IGPQx3JfKPnICZdEXZ.jpg" alt="Desa Durenombo" class="img-fluid rounded-3">
+                </div>
+                <div class="col-lg-6 mb-4" data-aos="fade-left">
+                    <h2 class="section-title">Tentang BUMDes Sumber Rejeki</h2>
+                    <p class="section-subtitle">Sejarah singkat BUMDes Sumber Rejeki Desa Durenombo</p>
+                    <p>BUMDes Sumber Rejeki didirikan pada tahun 2025 sebagai wujud komitmen pemerintah desa untuk meningkatkan kesejahteraan warga melalui pengembangan potensi lokal. Dengan fokus pada unit usaha ternak domba, kami berupaya memberikan nilai tambah bagi komunitas desa.</p>
+                    
+                    <h4 class="mt-4 mb-3">Visi &amp; Misi</h4>
+                    <p><strong>Visi:</strong> Menjadi BUMDes yang mandiri, inovatif, dan berkelanjutan dalam meningkatkan kesejahteraan warga Desa Durenombo.</p>
+                    <p><strong>Misi:</strong></p>
+                    <ul>
+                        <li>Mengembangkan unit usaha unggulan berbasis potensi lokal</li>
+                        <li>Meningkatkan partisipasi masyarakat dalam pembangunan desa</li>
+                        <li>Memberikan manfaat ekonomi yang berkelanjutan bagi warga</li>
+                        <li>Membangun tata kelola yang transparan dan akuntabel</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-lg-12">
+                    <h3 class="text-center mb-4">Struktur Organisasi</h3>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="text-center">
+                                <img src="https://picsum.photos/seed/penasihat/200/200.jpg" alt="Penasihat" class="img-fluid rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+                                <h5>H. Sireng</h5>
+                                <p class="text-muted">Penasihat</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="text-center">
+                                <img src="https://picsum.photos/seed/pengawas/200/200.jpg" alt="Pengawas" class="img-fluid rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+                                <h5>Heru Setiawan</h5>
+                                <p class="text-muted">Pengawas</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="text-center">
+                                <img src="https://picsum.photos/seed/direktur/200/200.jpg" alt="Direktur Utama" class="img-fluid rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+                                <h5>Mudzakirin</h5>
+                                <p class="text-muted">Direktur Utama</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="text-center">
+                                <img src="https://picsum.photos/seed/sekretaris/200/200.jpg" alt="Sekretaris" class="img-fluid rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+                                <h5>Baedhowie</h5>
+                                <p class="text-muted">Sekretaris</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="500">
+                            <div class="text-center">
+                                <img src="https://picsum.photos/seed/bendahara/200/200.jpg" alt="Bendahara" class="img-fluid rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+                                <h5>Inayatun Hidayah</h5>
+                                <p class="text-muted">Bendahara</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="600">
+                            <div class="text-center">
+                                <img src="https://picsum.photos/seed/stafjasa/200/200.jpg" alt="Staf Jasa" class="img-fluid rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+                                <h5>Dwi Astuti</h5>
+                                <p class="text-muted">Staf Bidang Jasa Usaha</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="700">
+                            <div class="text-center">
+                                <img src="https://picsum.photos/seed/stafperdagangan/200/200.jpg" alt="Staf Perdagangan" class="img-fluid rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+                                <h5>Suharti</h5>
+                                <p class="text-muted">Staf Bidang Usaha Perdagangan Umum</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="800">
+                            <div class="text-center">
+                                <img src="https://picsum.photos/seed/stafketahan/200/200.jpg" alt="Staf Ketahanan" class="img-fluid rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+                                <h5>Amat Rifa'i</h5>
+                                <p class="text-muted">Staf Bidang Usaha Ketahanan</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-lg-12">
+                    <h3 class="text-center mb-4">Lokasi Kami</h3>
+                    <div class="map-container rounded-3 overflow-hidden" data-aos="fade-up">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.4479159284333!2d110.82374231477712!3d-7.5697995945435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a14e5e5e5e5e5%3A0x5e5e5e5e5e5e5e5e!2sDesa%20Durenombo!5e0!3m2!1sid!2sid!4v1620000000000!5m2!1sid!2sid" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Business Process Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Proses Bisnis Ternak Domba</h2>
+                <p class="section-subtitle">Kami mengelola ternak domba dengan standar kualitas tinggi</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-content">
+                        <h4 class="timeline-title">Pemilihan Bibit Unggul</h4>
+                        <p class="timeline-text">Kami memilih bibit domba berkualitas dengan kriteria kesehatan dan produktivitas terbaik untuk memastikan hasil ternak yang optimal.</p>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-egg"></i>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-content">
+                        <h4 class="timeline-title">Pemeliharaan Berkualitas</h4>
+                        <p class="timeline-text">Domba dipelihara di kandang yang bersih dan nyaman dengan perawatan kesehatan rutin oleh tenaga ahli peternakan.</p>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-content">
+                        <h4 class="timeline-title">Pakan Alami &amp; Bergizi</h4>
+                        <p class="timeline-text">Kami memberikan pakan alami dari rumput lokal dan suplemen gizi untuk mendukung pertumbuhan domba yang sehat dan optimal.</p>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-content">
+                        <h4 class="timeline-title">Pemantauan Kesehatan</h4>
+                        <p class="timeline-text">Tim kesehatan hewan kami melakukan pemantauan rutin untuk memastikan domba tetap sehat dan bebas dari penyakit.</p>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-content">
+                        <h4 class="timeline-title">Panen &amp; Penjualan</h4>
+                        <p class="timeline-text">Domba yang telah mencapai berat ideal siap untuk dipasarkan dengan kualitas terjamin dan harga yang kompetitif.</p>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Products Section -->
+    <section id="products" class="section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Produk &amp; Layanan</h2>
+                <p class="section-subtitle">Katalog domba berkualitas tinggi dari BUMDes Sumber Rejeki</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-card">
+                        <div class="product-img-container">
+                            <img src="https://picsum.photos/seed/sheep1/400/300.jpg" alt="Domba Garut" class="product-img">
+                            <span class="product-badge">Best Seller</span>
+                        </div>
+                        <div class="product-body">
+                            <h4 class="product-title">Domba Garut Super</h4>
+                            <div class="product-details">
+                                <div class="product-detail-item">
+                                    <span class="product-detail-label">Umur:</span>
+                                    <span class="product-detail-value">8-10 bulan</span>
+                                </div>
+                                <div class="product-detail-item">
+                                    <span class="product-detail-label">Berat:</span>
+                                    <span class="product-detail-value">45-55 kg</span>
+                                </div>
+                                <div class="product-detail-item">
+                                    <span class="product-detail-label">Jenis:</span>
+                                    <span class="product-detail-value">Jantan</span>
+                                </div>
+                            </div>
+                            <div class="product-price">Rp 3.500.000</div>
+                            <button class="product-btn" onclick="orderViaWhatsApp('Domba Garut Super', 'Rp 3.500.000')">Pesan via WhatsApp</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-card">
+                        <div class="product-img-container">
+                            <img src="https://picsum.photos/seed/sheep2/400/300.jpg" alt="Domba Ekor Gemuk" class="product-img">
+                            <span class="product-badge">Premium</span>
+                        </div>
+                        <div class="product-body">
+                            <h4 class="product-title">Domba Ekor Gemuk</h4>
+                            <div class="product-details">
+                                <div class="product-detail-item">
+                                    <span class="product-detail-label">Umur:</span>
+                                    <span class="product-detail-value">10-12 bulan</span>
+                                </div>
+                                <div class="product-detail-item">
+                                    <span class="product-detail-label">Berat:</span>
+                                    <span class="product-detail-value">50-60 kg</span>
+                                </div>
+                                <div class="product-detail-item">
+                                    <span class="product-detail-label">Jenis:</span>
+                                    <span class="product-detail-value">Jantan</span>
+                                </div>
+                            </div>
+                            <div class="product-price">Rp 4.200.000</div>
+                            <button class="product-btn" onclick="orderViaWhatsApp('Domba Ekor Gemuk', 'Rp 4.200.000')">Pesan via WhatsApp</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="product-card">
+                        <div class="product-img-container">
+                            <img src="https://picsum.photos/seed/sheep3/400/300.jpg" alt="Domba Dorper" class="product-img">
+                            <span class="product-badge">New</span>
+                        </div>
+                        <div class="product-body">
+                            <h4 class="product-title">Domba Dorper Cross</h4>
+                            <div class="product-details">
+                                <div class="product-detail-item">
+                                    <span class="product-detail-label">Umur:</span>
+                                    <span class="product-detail-value">6-8 bulan</span>
+                                </div>
+                                <div class="product-detail-item">
+                                    <span class="product-detail-label">Berat:</span>
+                                    <span class="product-detail-value">40-50 kg</span>
+                                </div>
+                                <div class="product-detail-item">
+                                    <span class="product-detail-label">Jenis:</span>
+                                    <span class="product-detail-value">Campuran</span>
+                                </div>
+                            </div>
+                            <div class="product-price">Rp 3.800.000</div>
+                            <button class="product-btn" onclick="orderViaWhatsApp('Domba Dorper Cross', 'Rp 3.800.000')">Pesan via WhatsApp</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="product-card">
+                        <div class="product-img-container">
+                            <img src="https://picsum.photos/seed/sheep4/400/300.jpg" alt="Domba Bibit" class="product-img">
+                            <span class="product-badge">Bibit</span>
+                        </div>
+                        <div class="product-body">
+                            <h4 class="product-title">Domba Bibit Unggul</h4>
+                            <div class="product-details">
+                                <div class="product-detail-item">
+                                    <span class="product-detail-label">Umur:</span>
+                                    <span class="product-detail-value">3-4 bulan</span>
+                                </div>
+                                <div class="product-detail-item">
+                                    <span class="product-detail-label">Berat:</span>
+                                    <span class="product-detail-value">15-20 kg</span>
+                                </div>
+                                <div class="product-detail-item">
+                                    <span class="product-detail-label">Jenis:</span>
+                                    <span class="product-detail-value">Campuran</span>
+                                </div>
+                            </div>
+                            <div class="product-price">Rp 1.500.000</div>
+                            <button class="product-btn" onclick="orderViaWhatsApp('Domba Bibit Unggul', 'Rp 1.500.000')">Pesan via WhatsApp</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="product-card">
+                        <div class="product-img-container">
+                            <img src="https://picsum.photos/seed/sheep5/400/300.jpg" alt="Domba Betina" class="product-img">
+                        </div>
+                        <div class="product-body">
+                            <h4 class="product-title">Domba Betina Produktif</h4>
+                            <div class="product-details">
+                                <div class="product-detail-item">
+                                    <span class="product-detail-label">Umur:</span>
+                                    <span class="product-detail-value">12-18 bulan</span>
+                                </div>
+                                <div class="product-detail-item">
+                                    <span class="product-detail-label">Berat:</span>
+                                    <span class="product-detail-value">35-45 kg</span>
+                                </div>
+                                <div class="product-detail-item">
+                                    <span class="product-detail-label">Jenis:</span>
+                                    <span class="product-detail-value">Betina</span>
+                                </div>
+                            </div>
+                            <div class="product-price">Rp 2.800.000</div>
+                            <button class="product-btn" onclick="orderViaWhatsApp('Domba Betina Produktif', 'Rp 2.800.000')">Pesan via WhatsApp</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="product-card">
+                        <div class="product-img-container">
+                            <img src="https://picsum.photos/seed/sheep6/400/300.jpg" alt="Paket Ternak" class="product-img">
+                            <span class="product-badge">Paket</span>
+                        </div>
+                        <div class="product-body">
+                            <h4 class="product-title">Paket Ternak 5 Ekor</h4>
+                            <div class="product-details">
+                                <div class="product-detail-item">
+                                    <span class="product-detail-label">Isi Paket:</span>
+                                    <span class="product-detail-value">5 ekor domba</span>
+                                </div>
+                                <div class="product-detail-item">
+                                    <span class="product-detail-label">Bonus:</span>
+                                    <span class="product-detail-value">Pakan 1 bulan</span>
+                                </div>
+                                <div class="product-detail-item">
+                                    <span class="product-detail-label">Jenis:</span>
+                                    <span class="product-detail-value">Campuran</span>
+                                </div>
+                            </div>
+                            <div class="product-price">Rp 15.000.000</div>
+                            <button class="product-btn" onclick="orderViaWhatsApp('Paket Ternak 5 Ekor', 'Rp 15.000.000')">Pesan via WhatsApp</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- News Section -->
+    <section id="news" class="section bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Berita &amp; Artikel</h2>
+                <p class="section-subtitle">Update kegiatan dan artikel edukasi seputar ternak domba</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="https://picsum.photos/seed/news1/400/250.jpg" class="card-img-top" alt="Berita 1">
+                        <div class="card-body">
+                            <span class="badge bg-success mb-2">Kegiatan</span>
+                            <h5 class="card-title">Panen Raya Domba Periode Kedua 2025</h5>
+                            <p class="card-text">BUMDes Sumber Rejeki berhasil memanen 50 ekor domba berkualitas tinggi pada periode kedua tahun 2025...</p>
+                            <a href="#" class="btn btn-sm btn-outline-success">Baca Selengkapnya</a>
+                        </div>
+                        <div class="card-footer bg-white text-muted">
+                            <small><i class="far fa-calendar me-2"></i>15 Oktober 2025</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="https://picsum.photos/seed/news2/400/250.jpg" class="card-img-top" alt="Berita 2">
+                        <div class="card-body">
+                            <span class="badge bg-warning text-dark mb-2">Edukasi</span>
+                            <h5 class="card-title">Tips Merawat Domba Saat Musim Hujan</h5>
+                            <p class="card-text">Musim hujan dapat menjadi tantangan tersendiri dalam pemeliharaan domba. Berikut tips dari tim ahli kami...</p>
+                            <a href="#" class="btn btn-sm btn-outline-success">Baca Selengkapnya</a>
+                        </div>
+                        <div class="card-footer bg-white text-muted">
+                            <small><i class="far fa-calendar me-2"></i>5 Oktober 2025</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="https://picsum.photos/seed/news3/400/250.jpg" class="card-img-top" alt="Berita 3">
+                        <div class="card-body">
+                            <span class="badge bg-info mb-2">Pemberdayaan</span>
+                            <h5 class="card-title">Pelatihan Budidaya Ternak Domba Bagi Pemuda Desa</h5>
+                            <p class="card-text">Sebanyak 20 pemuda desa mengikuti pelatihan budidaya ternak domba yang diselenggarakan oleh BUMDes...</p>
+                            <a href="#" class="btn btn-sm btn-outline-success">Baca Selengkapnya</a>
+                        </div>
+                        <div class="card-footer bg-white text-muted">
+                            <small><i class="far fa-calendar me-2"></i>25 September 2025</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-success">Lihat Semua Berita</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Gallery Section -->
+    <section id="gallery" class="section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Galeri Foto &amp; Video</h2>
+                <p class="section-subtitle">Dokumentasi kegiatan peternakan dan aktivitas warga</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/gallery1/400/300.jpg" alt="Gallery 1" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <h5 class="gallery-title">Kandang Domba Modern</h5>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/gallery2/400/300.jpg" alt="Gallery 2" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <h5 class="gallery-title">Pemberian Pakan Rutin</h5>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/gallery3/400/300.jpg" alt="Gallery 3" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <h5 class="gallery-title">Panen Domba Berkualitas</h5>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/gallery4/400/300.jpg" alt="Gallery 4" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <h5 class="gallery-title">Pelatihan Peternakan</h5>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/gallery5/400/300.jpg" alt="Gallery 5" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <h5 class="gallery-title">Tim Kesehatan Hewan</h5>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/gallery6/400/300.jpg" alt="Gallery 6" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <h5 class="gallery-title">Warga Desa Berpartisipasi</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-lg-12">
+                    <h3 class="text-center mb-4">Video Kegiatan</h3>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-6 mb-4" data-aos="fade-up">
+                            <div class="ratio ratio-16x9">
+                                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video 1" allowfullscreen=""></iframe>
+                            </div>
+                            <h5 class="mt-3 text-center">Profil BUMDes Sumber Rejeki</h5>
+                        </div>
+                        <div class="col-lg-6 mb-4" data-aos="fade-up">
+                            <div class="ratio ratio-16x9">
+                                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video 2" allowfullscreen=""></iframe>
+                            </div>
+                            <h5 class="mt-3 text-center">Proses Budidaya Ternak Domba</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Transparency Section -->
+    <section id="transparency" class="section bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Transparansi Keuangan</h2>
+                <p class="section-subtitle">Laporan keuangan BUMDes Sumber Rejeki yang terbuka dan akuntabel</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6 mb-4" data-aos="fade-right">
+                    <div class="report-card">
+                        <h3 class="report-title">Laporan Keuangan Triwulan III 2025</h3>
+                        <div class="report-stats">
+                            <div class="stat-item">
+                                <div class="stat-value">Rp 245.5M</div>
+                                <div class="stat-label">Total Aset</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">Rp 87.3M</div>
+                                <div class="stat-label">Pendapatan</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">Rp 62.1M</div>
+                                <div class="stat-label">Laba Bersih</div>
+                            </div>
+                        </div>
+                        
+                        <div class="report-chart">
+                            <canvas id="financeChart"></canvas>
+                        </div>
+                        
+                        <a href="#" class="report-btn">
+                            <i class="fas fa-download me-2"></i>Unduh Laporan Lengkap (PDF)
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4" data-aos="fade-left">
+                    <div class="report-card">
+                        <h3 class="report-title">Pertumbuhan Ternak Domba</h3>
+                        <div class="report-stats">
+                            <div class="stat-item">
+                                <div class="stat-value">325</div>
+                                <div class="stat-label">Jumlah Ternak</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">+23%</div>
+                                <div class="stat-label">Pertumbuhan YoY</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">95%</div>
+                                <div class="stat-label">Tingkat Kelangsungan</div>
+                            </div>
+                        </div>
+                        
+                        <div class="report-chart">
+                            <canvas id="growthChart"></canvas>
+                        </div>
+                        
+                        <a href="#" class="report-btn">
+                            <i class="fas fa-download me-2"></i>Unduh Data Lengkap (PDF)
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-4">
+                <div class="col-lg-12 text-center" data-aos="fade-up">
+                    <p class="mb-3">Laporan keuangan lengkap tersedia di kantor BUMDes Sumber Rejeki</p>
+                    <a href="#" class="btn btn-success">Lihat Semua Laporan</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Testimoni Warga &amp; Pembeli</h2>
+                <p class="section-subtitle">Apa kata mereka tentang BUMDes Sumber Rejeki</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-card">
+                        <div class="testimonial-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">"Bergabung dengan BUMDes Sumber Rejeki telah mengubah hidup saya. Pendapatan meningkat dan saya bisa memberikan pendidikan yang lebih baik untuk anak-anak saya."</p>
+                        <div class="testimonial-author">
+                            <img src="https://picsum.photos/seed/person1/100/100.jpg" alt="Testimoni 1" class="testimonial-img">
+                            <div>
+                                <h5 class="testimonial-name">Budi Santoso</h5>
+                                <p class="testimonial-role">Peternak Mitra</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-card">
+                        <div class="testimonial-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">"Kualitas domba dari BUMDes Sumber Rejeki sangat baik. Sehat, gemuk, dan harga yang kompetitif. Sangat puas dengan pembelian saya."</p>
+                        <div class="testimonial-author">
+                            <img src="https://picsum.photos/seed/person2/100/100.jpg" alt="Testimoni 2" class="testimonial-img">
+                            <div>
+                                <h5 class="testimonial-name">H. Ahmad Fauzi</h5>
+                                <p class="testimonial-role">Pembeli dari Jakarta</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-card">
+                        <div class="testimonial-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">"Program pelatihan yang diselenggarakan BUMDes sangat bermanfaat. Saya jadi lebih mengerti cara beternak yang baik dan benar."</p>
+                        <div class="testimonial-author">
+                            <img src="https://picsum.photos/seed/person3/100/100.jpg" alt="Testimoni 3" class="testimonial-img">
+                            <div>
+                                <h5 class="testimonial-name">Siti Nurjanah</h5>
+                                <p class="testimonial-role">Peserta Pelatihan</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-lg-12" data-aos="fade-up">
+                    <h3 class="text-center mb-4">Video Testimoni</h3>
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video Testimoni" allowfullscreen=""></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Hubungi Kami</h2>
+                <p class="section-subtitle">Kami siap membantu dan menjawab pertanyaan Anda</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-5 mb-4" data-aos="fade-right">
+                    <div class="contact-info">
+                        <h4 class="mb-4">Informasi Kontak</h4>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <div class="contact-label">Alamat</div>
+                                <div class="contact-value">Desa Durenombo, Kec. Subah, Kab. Batang, Jawa Tengah 51263<br>RT 03/RW 02</div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <div class="contact-label">Telepon</div>
+                                <div class="contact-value">0852-0007-9259</div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="contact-text">
+                                <div class="contact-label">WhatsApp</div>
+                                <div class="contact-value">+62&nbsp;852-0007-9259</div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <div class="contact-label">Email</div>
+                                <div class="contact-value">bumdessumberrejeki.durenombo@gmail.com</div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-text">
+                                <div class="contact-label">Jam Operasional</div>
+                                <div class="contact-value">Senin - Jumat: 08:00 - 16:00<br>Sabtu: 08:00 - 12:00</div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <h5 class="mb-3">Ikuti Kami</h5>
+                            <div class="social-links">
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-tiktok"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-7 mb-4" data-aos="fade-left">
+                    <div class="contact-form">
+                        <h4 class="mb-4">Kirim Pesan</h4>
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="name" placeholder="Nama Lengkap" required="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" id="email" placeholder="Email" required="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <div class="form-group">
+                                        <input type="tel" class="form-control" id="phone" placeholder="Nomor Telepon" required="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="form-group">
+                                        <select class="form-control" id="subject" required="">
+                                            <option value="" selected="" disabled="">Pilih Subjek</option>
+                                            <option value="informasi">Informasi Produk</option>
+                                            <option value="pemesanan">Pemesanan</option>
+                                            <option value="kerjasama">Kerjasama</option>
+                                            <option value="lainnya">Lainnya</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group mb-3">
+                                <textarea class="form-control" id="message" rows="5" placeholder="Pesan Anda" required=""></textarea>
+                            </div>
+                            <button type="submit" class="form-btn">Kirim Pesan</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h3 class="footer-logo">BUMDes Sumber Rejeki</h3>
+                    <p class="footer-text">Membangun desa, mensejahterakan warga melalui pengembangan potensi lokal dan unit usaha unggulan.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="mb-3">Tautan Cepat</h5>
+                    <ul class="footer-links">
+                        <li><a href="#home">Beranda</a></li>
+                        <li><a href="#about">Tentang Kami</a></li>
+                        <li><a href="#business">Unit Usaha</a></li>
+                        <li><a href="#products">Produk</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="mb-3">Lainnya</h5>
+                    <ul class="footer-links">
+                        <li><a href="#news">Berita &amp; Artikel</a></li>
+                        <li><a href="#gallery">Galeri</a></li>
+                        <li><a href="#transparency">Transparansi</a></li>
+                        <li><a href="#testimonials">Testimoni</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4 mb-4">
+                    <h5 class="mb-3">Kontak</h5>
+                    <ul class="footer-links">
+                        <li>Desa Durenombo, Kec. Subah, Kab. Batang, Jawa Tengah 51263, RT 03/RW 02</li>
+                        <li><i class="fas fa-phone me-2"></i>0852-0007-9259</li>
+                        <li><i class="fab fa-whatsapp me-2"></i>+62&nbsp;852-0007-9259</li>
+                        <li><i class="fas fa-envelope me-2"></i>bumdessumberrejeki.durenombo@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2025 BUMDes Sumber Rejeki - Desa Durenombo. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+        
+        <!-- Animated Sheep in Footer -->
+        <div class="footer-sheep">
+            <svg class="footer-sheep-item" viewBox="0 0 100 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Body -->
+                <ellipse cx="50" cy="35" rx="25" ry="18" fill="#F5F5F5"></ellipse>
+                <ellipse cx="50" cy="35" rx="22" ry="15" fill="#FFFFFF"></ellipse>
+                
+                <!-- Wool texture -->
+                <circle cx="45" cy="30" r="3" fill="#F5F5F5" opacity="0.7"></circle>
+                <circle cx="55" cy="32" r="2.5" fill="#F5F5F5" opacity="0.7"></circle>
+                <circle cx="48" cy="38" r="3" fill="#F5F5F5" opacity="0.7"></circle>
+                <circle cx="52" cy="36" r="2" fill="#F5F5F5" opacity="0.7"></circle>
+                
+                <!-- Head -->
+                <ellipse cx="70" cy="30" rx="12" ry="10" fill="#8D6E63"></ellipse>
+                <ellipse cx="72" cy="28" rx="10" ry="8" fill="#A1887F"></ellipse>
+                
+                <!-- Eyes -->
+                <circle cx="75" cy="28" r="2" fill="#212121"></circle>
+                <circle cx="75.5" cy="27.5" r="0.5" fill="white"></circle>
+                
+                <!-- Ears -->
+                <ellipse cx="68" cy="22" rx="3" ry="5" fill="#6D4C41" transform="rotate(-20 68 22)"></ellipse>
+                <ellipse cx="76" cy="22" rx="3" ry="5" fill="#6D4C41" transform="rotate(20 76 22)"></ellipse>
+                
+                <!-- Legs with walking animation -->
+                <g class="sheep-leg-front-left">
+                    <rect x="35" y="45" width="4" height="12" rx="2" fill="#5D4037"></rect>
+                    <ellipse cx="37" cy="57" rx="3" ry="2" fill="#3E2723"></ellipse>
+                </g>
+                <g class="sheep-leg-front-right">
+                    <rect x="42" y="45" width="4" height="12" rx="2" fill="#5D4037"></rect>
+                    <ellipse cx="44" cy="57" rx="3" ry="2" fill="#3E2723"></ellipse>
+                </g>
+                <g class="sheep-leg-back-left">
+                    <rect x="54" y="45" width="4" height="12" rx="2" fill="#5D4037"></rect>
+                    <ellipse cx="56" cy="57" rx="3" ry="2" fill="#3E2723"></ellipse>
+                </g>
+                <g class="sheep-leg-back-right">
+                    <rect x="61" y="45" width="4" height="12" rx="2" fill="#5D4037"></rect>
+                    <ellipse cx="63" cy="57" rx="3" ry="2" fill="#3E2723"></ellipse>
+                </g>
+                
+                <!-- Tail -->
+                <ellipse cx="25" cy="35" rx="8" ry="4" fill="#F5F5F5" transform="rotate(-30 25 35)"></ellipse>
+                <circle cx="23" cy="33" r="2" fill="#212121"></circle>
+            </svg>
+            <svg class="footer-sheep-item" viewBox="0 0 100 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Body -->
+                <ellipse cx="50" cy="35" rx="25" ry="18" fill="#F5F5F5"></ellipse>
+                <ellipse cx="50" cy="35" rx="22" ry="15" fill="#FFFFFF"></ellipse>
+                
+                <!-- Wool texture -->
+                <circle cx="45" cy="30" r="3" fill="#F5F5F5" opacity="0.7"></circle>
+                <circle cx="55" cy="32" r="2.5" fill="#F5F5F5" opacity="0.7"></circle>
+                <circle cx="48" cy="38" r="3" fill="#F5F5F5" opacity="0.7"></circle>
+                <circle cx="52" cy="36" r="2" fill="#F5F5F5" opacity="0.7"></circle>
+                
+                <!-- Head -->
+                <ellipse cx="70" cy="30" rx="12" ry="10" fill="#8D6E63"></ellipse>
+                <ellipse cx="72" cy="28" rx="10" ry="8" fill="#A1887F"></ellipse>
+                
+                <!-- Eyes -->
+                <circle cx="75" cy="28" r="2" fill="#212121"></circle>
+                <circle cx="75.5" cy="27.5" r="0.5" fill="white"></circle>
+                
+                <!-- Ears -->
+                <ellipse cx="68" cy="22" rx="3" ry="5" fill="#6D4C41" transform="rotate(-20 68 22)"></ellipse>
+                <ellipse cx="76" cy="22" rx="3" ry="5" fill="#6D4C41" transform="rotate(20 76 22)"></ellipse>
+                
+                <!-- Legs with walking animation -->
+                <g class="sheep-leg-front-left">
+                    <rect x="35" y="45" width="4" height="12" rx="2" fill="#5D4037"></rect>
+                    <ellipse cx="37" cy="57" rx="3" ry="2" fill="#3E2723"></ellipse>
+                </g>
+                <g class="sheep-leg-front-right">
+                    <rect x="42" y="45" width="4" height="12" rx="2" fill="#5D4037"></rect>
+                    <ellipse cx="44" cy="57" rx="3" ry="2" fill="#3E2723"></ellipse>
+                </g>
+                <g class="sheep-leg-back-left">
+                    <rect x="54" y="45" width="4" height="12" rx="2" fill="#5D4037"></rect>
+                    <ellipse cx="56" cy="57" rx="3" ry="2" fill="#3E2723"></ellipse>
+                </g>
+                <g class="sheep-leg-back-right">
+                    <rect x="61" y="45" width="4" height="12" rx="2" fill="#5D4037"></rect>
+                    <ellipse cx="63" cy="57" rx="3" ry="2" fill="#3E2723"></ellipse>
+                </g>
+                
+                <!-- Tail -->
+                <ellipse cx="25" cy="35" rx="8" ry="4" fill="#F5F5F5" transform="rotate(-30 25 35)"></ellipse>
+                <circle cx="23" cy="33" r="2" fill="#212121"></circle>
+            </svg>
+            <svg class="footer-sheep-item" viewBox="0 0 100 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Body -->
+                <ellipse cx="50" cy="35" rx="25" ry="18" fill="#F5F5F5"></ellipse>
+                <ellipse cx="50" cy="35" rx="22" ry="15" fill="#FFFFFF"></ellipse>
+                
+                <!-- Wool texture -->
+                <circle cx="45" cy="30" r="3" fill="#F5F5F5" opacity="0.7"></circle>
+                <circle cx="55" cy="32" r="2.5" fill="#F5F5F5" opacity="0.7"></circle>
+                <circle cx="48" cy="38" r="3" fill="#F5F5F5" opacity="0.7"></circle>
+                <circle cx="52" cy="36" r="2" fill="#F5F5F5" opacity="0.7"></circle>
+                
+                <!-- Head -->
+                <ellipse cx="70" cy="30" rx="12" ry="10" fill="#8D6E63"></ellipse>
+                <ellipse cx="72" cy="28" rx="10" ry="8" fill="#A1887F"></ellipse>
+                
+                <!-- Eyes -->
+                <circle cx="75" cy="28" r="2" fill="#212121"></circle>
+                <circle cx="75.5" cy="27.5" r="0.5" fill="white"></circle>
+                
+                <!-- Ears -->
+                <ellipse cx="68" cy="22" rx="3" ry="5" fill="#6D4C41" transform="rotate(-20 68 22)"></ellipse>
+                <ellipse cx="76" cy="22" rx="3" ry="5" fill="#6D4C41" transform="rotate(20 76 22)"></ellipse>
+                
+                <!-- Legs with walking animation -->
+                <g class="sheep-leg-front-left">
+                    <rect x="35" y="45" width="4" height="12" rx="2" fill="#5D4037"></rect>
+                    <ellipse cx="37" cy="57" rx="3" ry="2" fill="#3E2723"></ellipse>
+                </g>
+                <g class="sheep-leg-front-right">
+                    <rect x="42" y="45" width="4" height="12" rx="2" fill="#5D4037"></rect>
+                    <ellipse cx="44" cy="57" rx="3" ry="2" fill="#3E2723"></ellipse>
+                </g>
+                <g class="sheep-leg-back-left">
+                    <rect x="54" y="45" width="4" height="12" rx="2" fill="#5D4037"></rect>
+                    <ellipse cx="56" cy="57" rx="3" ry="2" fill="#3E2723"></ellipse>
+                </g>
+                <g class="sheep-leg-back-right">
+                    <rect x="61" y="45" width="4" height="12" rx="2" fill="#5D4037"></rect>
+                    <ellipse cx="63" cy="57" rx="3" ry="2" fill="#3E2723"></ellipse>
+                </g>
+                
+                <!-- Tail -->
+                <ellipse cx="25" cy="35" rx="8" ry="4" fill="#F5F5F5" transform="rotate(-30 25 35)"></ellipse>
+                <circle cx="23" cy="33" r="2" fill="#212121"></circle>
+            </svg>
+        </div>
+    </footer>
+    
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/6285200079259?text=Halo%20BUMDes%20Sumber%20Rejeki,%20saya%20tertarik%20dengan%20produk%20domba%20yang%20Anda%20tawarkan." class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+        
+        // Hide loader when page is loaded
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('loader').classList.add('hidden');
+            }, 1000);
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Change navbar background on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+            } else {
+                navbar.style.backgroundColor = 'white';
+                navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+            }
+        });
+        
+        // Order via WhatsApp function
+        function orderViaWhatsApp(productName, price) {
+            const message = `Halo BUMDes Sumber Rejeki, saya tertarik untuk memesan produk "${productName}" dengan harga ${price}. Mohon informasikan ketersediaan dan proses pemesanannya. Terima kasih.`;
+            const whatsappUrl = `https://wa.me/6281234567890?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+        
+        // Contact form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Create WhatsApp message
+            const whatsappMessage = `Halo BUMDes Sumber Rejeki,\n\nNama: ${name}\nEmail: ${email}\nTelepon: ${phone}\nSubjek: ${subject}\n\nPesan:\n${message}`;
+            
+            // Open WhatsApp with pre-filled message
+            const whatsappUrl = `https://wa.me/6281234567890?text=${encodeURIComponent(whatsappMessage)}`;
+            window.open(whatsappUrl, '_blank');
+            
+            // Reset form
+            this.reset();
+        });
+        
+        // Initialize Finance Chart
+        const financeCtx = document.getElementById('financeChart').getContext('2d');
+        const financeChart = new Chart(financeCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Q1 2025', 'Q2 2025', 'Q3 2025'],
+                datasets: [{
+                    label: 'Pendapatan (Juta Rp)',
+                    data: [65, 78, 87.3],
+                    backgroundColor: '#4CAF50',
+                    borderColor: '#2E7D32',
+                    borderWidth: 1
+                }, {
+                    label: 'Laba (Juta Rp)',
+                    data: [42, 55, 62.1],
+                    backgroundColor: '#FFC107',
+                    borderColor: '#F57C00',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+        
+        // Initialize Growth Chart
+        const growthCtx = document.getElementById('growthChart').getContext('2d');
+        const growthChart = new Chart(growthCtx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agu', 'Sep'],
+                datasets: [{
+                    label: 'Jumlah Ternak',
+                    data: [180, 195, 210, 225, 240, 255, 270, 290, 325],
+                    backgroundColor: 'rgba(76, 175, 80, 0.2)',
+                    borderColor: '#2E7D32',
+                    borderWidth: 2,
+                    tension: 0.4,
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: false
+                    }
+                }
+            }
+        });
+    </script>
+
+</body></html>
